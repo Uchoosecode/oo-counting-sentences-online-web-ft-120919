@@ -15,10 +15,9 @@ class String
   end
 
   def count_sentences
-  sentences = []
-    count_sentences.each do ||
-  end
-  binding.pry
-     sentences 
+    sentence_count = self.split(/[.?!]/).reject do |string| 
+      string.empty?
+    end
+      return sentence_count.length
   end
 end
